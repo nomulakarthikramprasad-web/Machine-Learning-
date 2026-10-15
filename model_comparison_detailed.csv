@@ -1,0 +1,5 @@
+Category,Paradigm,Primary Metric,Secondary Metric,Fairness (Jain's),Collision Rate (%),Resource Util (%),Comm Overhead (KB),Privacy Guarantee,Training Time (s),Status
+Reinforcement Learning,Centralized Baseline (Single-Agent DQN),"Mean Throughput: 5,892.23 kbps",Mean Latency: 56.48 ms,0.3967,80.0,59.98,0.0,None (Raw Telemetry Centralized),0.1,Theoretical Upper Bound (Privacy Violation)
+Reinforcement Learning,Independent MARL (I-DQN),"Mean Throughput: 4,918.33 kbps",Mean Latency: 67.86 ms,0.3711,80.04,55.33,0.0,"High (Local Data Only, No Sharing)",26.99,Non-Stationary Convergence Flaw
+Reinforcement Learning,Federated MARL (FedAvg),"Mean Throughput: 4,168.39 kbps",Mean Latency: 71.97 ms,0.3695,84.58,53.02,1901.17,"High (Weights Only, Zero Raw Data)",26.58,Best Practical Solution (70.7% Centralized Throughput)
+Reinforcement Learning,DP-FedMARL (Privacy Enhanced),"Mean Throughput: 3,967.53 kbps",Mean Latency: 78.52 ms,0.3623,82.76,49.8,1901.17,Enhanced (Weights + Clipping C=1.0 + Noise sigma=0.01),26.83,Rigorous Differential Privacy (< 5% Throughput Penalty)

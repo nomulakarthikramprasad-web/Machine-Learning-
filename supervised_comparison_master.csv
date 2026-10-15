@@ -1,0 +1,11 @@
+Model Type,Task,Primary Metric (R2 / Acc),Error (RMSE / F1),Parameters / Complexity,Outcome
+Linear Regression (OLS),Bandwidth Regression,0.9931,RMSE: 314.80 kbps,Linear Weights,CO2
+Ridge Regression (L2),Bandwidth Regression,0.9931,RMSE: 314.82 kbps,alpha=1.0,CO2
+Lasso Regression (L1),Bandwidth Regression,0.9931,RMSE: 314.81 kbps,alpha=0.1,CO2
+ElasticNet Regression,Bandwidth Regression,0.9898,RMSE: 383.47 kbps,"alpha=0.1, l1_ratio=0.5",CO2
+Binary Logistic Regression,High vs Low Demand,0.9768,Macro F1: 0.9800,L-BFGS Solver,CO2
+Multinomial Logistic Reg,QoS Traffic Classes 0-3,1.0,Macro F1: 1.0000,Softmax Multi-class,CO2
+Decision Tree (Gini),Traffic Classification,0.9949,Macro F1: 0.9948,Gini Impurity,CO3
+Decision Tree (Entropy),Traffic Classification,0.9956,Macro F1: 0.9954,Information Gain,CO3
+Random Forest (100 Trees),Traffic Classification,1.0,Macro F1: 1.0000,"Bagging, 100 Estimators",CO3
+XGBoost Classifier (GBDT),Traffic Classification,1.0,Macro F1: 1.0000,"v3.2.0, lr=0.1, depth=5",CO3
